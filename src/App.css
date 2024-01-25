@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merienda:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+
+:root{
+    --penn-blue: #001F60ff;
+    --eerie-black: #1A1A1Aff;
+    --satin-sheen-gold: #CF9B45ff;
+    --white: #FEFEFEff;
+    --heading-font:'Raleway', sans-serif;
+    --miniheading-font: 'Kaushan Script', cursive;
+    --merianda-font: 'Merienda', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+  transform: rotateY(180deg);
+}
+.col{
+    position: relative;
+}
+#overall{
+    background-color: var(--penn-blue);
+    overflow: auto;
+}
+#layer1{
+    height: 90%;
+    width: 100%;
+    background-color: var(--satin-sheen-gold);
+    border-top-left-radius: 60%;
+    position: fixed;
+    bottom: 0;
+}
+#layer2{
+    position: fixed;
+    bottom: 0;
+    height: 80%;
+    width: 100%;
+    border-top-left-radius: 60%;
+    background: url(../public/barkTexture.png);
+    background-size: cover;
+}
+#content-div{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text-div{
+    height: max-content;
+}
+#name{
+    color: var(--white);
+}
+#name > h1{
+    font-weight: 800;
+    font-size: 60px;
+    font-family: var(--heading-font);
+}
+#name > h2{
+    font-family: var(--miniheading-font);
+    font-weight: 500;
+    font-size: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+a, .nav-item > a{
+    text-decoration: none;
+}
+.nav-item > a{
+    color: var(--white);
+    font-weight: 700;
+    font-family: var(--heading-font);
+    font-size: 18px;
+}
+.nav-item > a:hover{
+    color: var(--penn-blue);
+}
+#links > a{
+    color: var(--satin-sheen-gold);
+    font-size: 40px;
+}
+#toggler{
+    color: var(--white);
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    display: none;
+}
+@media(max-width:768px){
+    #text-div{
+        position: absolute;
+    }
+    #name > h1{
+        font-size: 40px;
+    }#name > h2{
+        font-size: 30px;
+    }
+    img{
+        width: 500px;
+    }
+}
+@media(max-width:1077px){
+    #toggler{
+        display: block;
+    }
+    /* .nav{
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+        background-color: var(--satin-sheen-gold);
+        display:grid;
+    } */
+    
+    .nav-item > a{
+        font-weight: 300;
+    }
+}
+#cont{
+    height: calc(100vh - 20%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#navbar{
+    height: 10%;
+    background-color: var(--penn-blue);
 }
