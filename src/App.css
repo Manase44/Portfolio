@@ -37,16 +37,16 @@ img{
     background: url(../public/barkTexture.png);
     background-size: cover;
 }
-#content-div{
+#contentDiv{
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background:red;
+    z-index: 200;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#text-div{
+#textDiv{
     height: max-content;
 }
 #name{
@@ -90,7 +90,7 @@ a, .nav-item > a{
     display: none;
 }
 @media(max-width:768px){
-    #text-div{
+    #textDiv{
         position: absolute;
     }
     #name > h1{
