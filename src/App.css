@@ -106,23 +106,55 @@ a, .nav-item > a{
     #toggler{
         display: block;
     }
-    /* .nav{
+    .nav{
         position: absolute;
         top: 3rem;
         right: 1rem;
         background-color: var(--satin-sheen-gold);
         display:grid;
-    } */
+        display: none;
+    }
     
     .nav-item > a{
         font-weight: 300;
     }
 }
+#background{
+    position: fixed;
+    background: url(../public/barkTexture.png);
+    background-size: cover;
+    height: 100vh;
+    bottom: 0;
+    width: 100vw;
+}
+
 #cont{
     height: calc(100vh - 20%);
 }
 
 #navbar{
+    position: fixed;
+    width: 100vw;
     height: 10%;
     background-color: var(--penn-blue);
+}
+
+.bar{
+    background-color: var(--satin-sheen-gold);
+    width: 100vw;
+    height: 0.5rem;
+    margin-bottom: 0;
+    position: fixed;
+    z-index: 2;
+}
+#title::before, #title::after{
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #4ceb95;
+    margin: 4px 10px;
+}
+.aboutSummary{
+    text-align: justify ;
 }
