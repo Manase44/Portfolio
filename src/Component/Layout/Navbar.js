@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
    <div>
      <nav className="navbar sticky-top navbar-expand-lg" id='navbar'>
-        <div className="container-fluid">
+        <div className="container">
             <Link className="navbar-brand" to="/"> Gunga </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span>

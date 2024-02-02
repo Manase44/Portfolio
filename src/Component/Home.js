@@ -10,7 +10,7 @@ const Home = () => {
                 <div id="layer2"></div>
                 <div className="row" id="contentDiv">
                     <div className="col-md-6 col-lg-5">
-                        <img src="/FullPic.png" className='img-fluid' alt="MyPhoto" />
+                        <img src="/FullPic.png" className='img-fluid' id="MyPhoto" />
                     </div>
                     <div id='textDiv' className="col-md-5 col-lg-7 text-center text-md-start">
                     <div id="name">
@@ -39,17 +39,17 @@ const Home = () => {
                         </ul>
                         <i className="fa-solid fa-bars fa-xl" id="toggler"></i>
                         <div id="links" className="ms-3 mt-3">
-                            <a href="https://github.com/Manase44" className='me-2' rel="noreferrer"
+                            <a href="https://github.com/Manase44"  title='Github' className='me-2' rel="noreferrer"
                              target="_blank">
                                 <i className='bx bxl-github'></i>
                             </a>
-                            <a href="https://www.instagram.com/fikopersempre/" className='me-2' rel="noreferrer" target="_blank">
+                            <a href="https://www.instagram.com/fikopersempre/" title='Instagram' className='me-2' rel="noreferrer" target="_blank">
                                 <i className='bx bxl-instagram-alt'></i>
                             </a>
-                            <a href=" https://wa.me/+254740548093" className='me-2' rel="noreferrer" target="_blank">
+                            <a href=" https://wa.me/+254740548093" className='me-2' title='WhatsApp' rel="noreferrer" target="_blank">
                                 <i className='bx bxl-whatsapp-square'></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/manase-gunga-37a3612ab/" className='me-2' rel="noreferrer" target="_blank">
+                            <a href="https://www.linkedin.com/in/manase-gunga-37a3612ab/" title='LinkedIn' className='me-2' rel="noreferrer" target="_blank">
                                 <i className='bx bxl-linkedin-square'></i>
                             </a>
                         </div>

@@ -10,7 +10,7 @@
     --merianda-font: 'Merienda', cursive;
 }
 
-img{
+#MyPhoto{
   transform: rotateY(180deg);
 }
 .col{
@@ -71,7 +71,7 @@ a, .nav-item > a{
 }
 .nav-item > a{
     color: var(--white);
-    font-weight: 700;
+    font-weight: 600;
     font-family: var(--heading-font);
     font-size: 18px;
 }
@@ -82,12 +82,84 @@ a, .nav-item > a{
     color: var(--satin-sheen-gold);
     font-size: 40px;
 }
+button:focus{
+    outline: none !important;
+    box-shadow: none;
+}
+.fa-bars{
+    color: var(--white);
+}
 #toggler{
     color: var(--white);
     position: fixed;
     top: 2rem;
     right: 2rem;
     display: none;
+}
+
+#background{
+    position: fixed;
+    background: url(../public/barkTexture.png);
+    background-size: cover;
+    height: 100vh;
+    bottom: 0;
+    width: 100vw;
+}
+
+#navbar{
+    position: fixed;
+    width: 100vw;
+    height: 10%;
+    background-color: var(--penn-blue);
+}
+
+.bar{
+    background-color: var(--satin-sheen-gold);
+    width: 100vw;
+    height: 0.5rem;
+    margin-bottom: 0;
+    position: fixed;
+    z-index: 2;
+}
+#title{
+    font-weight: 600;
+}
+#title::before, #title::after{
+    content: "";
+    width: 120px;
+    height: 1.5px;
+    display: inline-block;
+    background: var(--satin-sheen-gold);
+    margin: 4px 10px;
+}
+#subtitle{
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color:var(--satin-sheen-gold);
+    text-decoration-thickness: 1.5px ;
+}
+.aboutSummary{
+    text-align: justify ;
+}
+#school:hover{
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+#certificate > div {
+    border: 1px red solid;
+    width: 120px;
+}
+#hob{
+    height: 3rem;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#message{
+    height: 150px;
 }
 @media(max-width:768px){
     #textDiv{
@@ -100,6 +172,9 @@ a, .nav-item > a{
     }
     img{
         width: 500px;
+    }
+    #title::before, #title::after{
+        width: 70px;
     }
 }
 @media(max-width:1077px){
@@ -118,43 +193,4 @@ a, .nav-item > a{
     .nav-item > a{
         font-weight: 300;
     }
-}
-#background{
-    position: fixed;
-    background: url(../public/barkTexture.png);
-    background-size: cover;
-    height: 100vh;
-    bottom: 0;
-    width: 100vw;
-}
-
-#cont{
-    height: calc(100vh - 20%);
-}
-
-#navbar{
-    position: fixed;
-    width: 100vw;
-    height: 10%;
-    background-color: var(--penn-blue);
-}
-
-.bar{
-    background-color: var(--satin-sheen-gold);
-    width: 100vw;
-    height: 0.5rem;
-    margin-bottom: 0;
-    position: fixed;
-    z-index: 2;
-}
-#title::before, #title::after{
-    content: "";
-    width: 120px;
-    height: 1px;
-    display: inline-block;
-    background: #4ceb95;
-    margin: 4px 10px;
-}
-.aboutSummary{
-    text-align: justify ;
 }
