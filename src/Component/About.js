@@ -19,11 +19,13 @@ const About = () => {
       <div className="container mt-4" id='sd'>
         <div className="row" >
           <div className="col bg-light mt-4 pt-4">
-
-            <p id='title' className='text-center'>ABOUT PAGE</p>
+            <p id='title' className='text-center'>ABOUT ME</p>
 
             <div className="row justify-content-center align-items-center">
-              <div className="col-7">
+              <div className="col-4 d-md-none mb-2">
+                <img src="/Me2-removebg-preview.png" className='img-fluid' alt="" />
+              </div>
+              <div className="col-md-7">
                 <p className="aboutSummary">
                   Hello! I am a Software engineering student. My current area
                   of expertise is full-stack web development, where I create
@@ -32,12 +34,10 @@ const About = () => {
                   conjunction with MongoDB database. I also have a vast
                   experience working with Microsoft Office packages. I am
                   very passionate about writing quality tested and
-                  maintainable code. I am excited to gain professional
-                  experience to impactful projects and become a software
-                  developer.
+                  maintainable code.
                 </p>
               </div>
-              <div className="col-4">
+              <div className="col-4 d-none d-md-block">
                 <img src="/Me2-removebg-preview.png" className='img-fluid' alt="" />
               </div>
             </div>

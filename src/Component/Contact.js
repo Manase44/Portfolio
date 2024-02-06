@@ -10,9 +10,9 @@ const Contact = () => {
       <div className="container mt-4">
         <div className="row" >
           <div className="col bg-light mt-4 pt-4">
-            <p id='title' className='text-center'>CONTACT PAGE</p>
+            <p id='title' className='text-center'>CONTACT</p>
             <div className="row">
-              <div className="col-7">
+              <div className="col-md-7">
                 <p id="subtitle">Send a Message</p>
 
                 <form action="#" method='#' className='form p-3'>
@@ -44,7 +44,7 @@ const Contact = () => {
                 </form>
 
               </div>
-              <div className="col-4">
+              <div className="col-md-4">
                 <p id="subtitle">Social Links</p>
                 <div id="links" className="ms-3 mt-3">
                   <a href="https://github.com/Manase44"  title='Github' className='me-2' rel="noreferrer"

@@ -38,13 +38,13 @@ const Resume = () => {
       <div className="container mt-4">
         <div className="row" >
           <div className="col bg-light mt-4 pt-4">
-            <p id='title' className='text-center'>RESUME PAGE</p>
+            <p id='title' className='text-center'>RESUME</p>
             <div className="row justify-content-between">
-              <div className="col-5">
+              <div className="col-lg-5">
                 <p id="subtitle">Education <i class="fa-solid fa-graduation-cap"></i></p>
               
                 {school.map(sch => (
-                  <div className='ms-4 mb-4 p-2 ' id='school'>
+                  <div className='mb-4 p-2 ' id='school'>
                     <p>{sch.institution}</p>
                     <p>{sch.course}</p>
                     <span>{sch.duration}</span>
@@ -52,7 +52,7 @@ const Resume = () => {
                 ))}
               
               </div>
-              <div className="col-5">
+              <div className="col-lg-5">
                 <p id="subtitle">Experience <i class="fa-solid fa-briefcase"></i></p>
 
                 {jobs.map(job => (
@@ -66,7 +66,7 @@ const Resume = () => {
             <div className="row">
               <div className="col">
                 <p id="subtitle">Skills <i class="fa-solid fa-user-gear"></i></p>
-                <div className="d-flex">
+                <div className="d-flex" id='Yscroll'>
                   {skills.map(sk => (
                     <div className='mx-2'>
                       <span>{sk.name}</span>
@@ -78,7 +78,7 @@ const Resume = () => {
             <div className="row">
               <div className="col">
                 <p id="subtitle">Certificates <i class="fa-solid fa-certificate"></i></p>
-                <div className="d-flex">
+                <div className="d-flex" id='Yscroll'>
                   {certificates.map(cert => (
                     <div className='ms-4 mb-4 p-2 ' id='certificate'>
                       <div>

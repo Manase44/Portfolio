@@ -13,30 +13,32 @@ const Home = () => {
                         <img src="/FullPic.png" className='img-fluid' id="MyPhoto" />
                     </div>
                     <div id='textDiv' className="col-md-5 col-lg-7 text-center text-md-start">
-                    <div id="name">
+                        <div id="name">
                             <h1>Manase Gunga</h1>
                             <h2>I am a Software Developer</h2>
                         </div>
+                       <div id='BnavMenu'>
                         <ul className="nav" id="navMenu">
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/" aria-current="page">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about">About</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/contact">Contact</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/resume">Resume</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/projects">Projets</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/testimonials">Testmonials</Link>
-                            </li>
-                        </ul>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/" aria-current="page">Home</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/about">About</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/contact">Contact</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/resume">Resume</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/projects">Projets</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/testimonials">Testmonials</Link>
+                                </li>
+                            </ul>
+                       </div>
                         <i className="fa-solid fa-bars fa-xl" id="toggler"></i>
                         <div id="links" className="ms-3 mt-3">
                             <a href="https://github.com/Manase44"  title='Github' className='me-2' rel="noreferrer"

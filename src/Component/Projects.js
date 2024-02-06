@@ -10,7 +10,7 @@ const Projects = () => {
       <div className="container mt-4">
         <div className="row" >
           <div className="col bg-light mt-4 pt-4">
-            <p id='title' className='text-center'>PROJECTS PAGE</p>
+            <p id='title' className='text-center'>MY PROJECTS</p>
           </div>
         </div>
       </div>

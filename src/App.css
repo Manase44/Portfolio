@@ -76,7 +76,7 @@ a, .nav-item > a{
     font-size: 18px;
 }
 .nav-item > a:hover{
-    color: var(--penn-blue);
+    color: var(--white);
 }
 #links > a{
     color: var(--satin-sheen-gold);
@@ -116,10 +116,9 @@ button:focus{
 .bar{
     background-color: var(--satin-sheen-gold);
     width: 100vw;
-    height: 0.5rem;
-    margin-bottom: 0;
-    position: fixed;
-    z-index: 2;
+    height: 5px;
+    bottom: 0;
+    position: absolute;
 }
 #title{
     font-weight: 600;
@@ -142,10 +141,15 @@ button:focus{
     text-align: justify ;
 }
 #school:hover{
-    border-radius: 1rem;
+    border-left: 2px var(--satin-sheen-gold) solid;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
-
+#menu{
+    background-color: var(--penn-blue);
+}
+#Yscroll{
+    overflow: auto;
+}
 #certificate > div {
     border: 1px red solid;
     width: 120px;
@@ -159,20 +163,19 @@ button:focus{
 }
 
 #message{
-    height: 150px;
+    height: 120px;
 }
 @media(max-width:768px){
     #textDiv{
         position: absolute;
+        z-index: 10;
     }
     #name > h1{
         font-size: 40px;
     }#name > h2{
         font-size: 30px;
     }
-    img{
-        width: 500px;
-    }
+   
     #title::before, #title::after{
         width: 70px;
     }
@@ -181,7 +184,12 @@ button:focus{
     #toggler{
         display: block;
     }
-    .nav{
+    #BnavMenu{
+        width: 300px;
+        right: 0;
+        position:relative;
+    }
+    #navMenu{
         position: absolute;
         top: 3rem;
         right: 1rem;
