@@ -5,12 +5,15 @@ import { useState } from 'react'
 const About = () => {
 
     const [hobbies, setHobbies] = useState([
-      {name:'Coding',icon:''},
-      {name:'Intellectual pursuit',icon:''}, 
-      {name:'Cycling', icon:'bx bx-cycling bx-sm me-1'},
-      {name:'Devotional quest', icon:''}
+      {name:'Coding',icon:'fa-solid fa-laptop-code me-1 fa-lg'},
+      {name:'Intellectual pursuit',icon:'fa-solid fa-brain me-1 fa-lg'}, 
+      {name:'Cycling', icon:'fa-solid fa-person-biking me-1 fa-lg'},
+      {name:'Devotional quest', icon:'fa-solid fa-book-bible me-1 fa-lg'}
     ])
 
+    const [details, setDetails] = useState([
+      {name:'Manase Gunga Karisa', age:new Date().getFullYear() - 2002, gender:'Male' }
+    ])
 
   return (
     <div>
@@ -21,20 +24,14 @@ const About = () => {
           <div className="col bg-light mt-4 pt-4">
             <p id='title' className='text-center'>ABOUT ME</p>
 
-            <div className="row justify-content-center align-items-center">
-              <div className="col-4 d-md-none mb-2">
+            <div className="row px-2 px-md-0 justify-content-around align-items-center">
+              <div className="col-6 d-md-none mb-2">
                 <img src="/Me2-removebg-preview.png" className='img-fluid' alt="" />
               </div>
               <div className="col-md-7">
                 <p className="aboutSummary">
-                  Hello! I am a Software engineering student. My current area
-                  of expertise is full-stack web development, where I create
-                  scalable and high-performing web applications using
-                  JavaScript frameworks like Node.js, Express.js, and React in
-                  conjunction with MongoDB database. I also have a vast
-                  experience working with Microsoft Office packages. I am
-                  very passionate about writing quality tested and
-                  maintainable code.
+                  I am a Software engineering student. Skilled in JavaScript frameworks like Node.js, Express.js, and React; adept at building performant web apps using MongoDB. Constantly expanding expertise across front and back-end languages to engineer intuitive solutions. I also have a vast
+                  experience working with Microsoft Office packages. Passionate about developing applications that streamline systems and connect communities. Eager to leverage my abilities to turn tomorrow's innovations into everyday solutions.
                 </p>
               </div>
               <div className="col-4 d-none d-md-block">
@@ -42,22 +39,24 @@ const About = () => {
               </div>
             </div>
 
-            <div className='row' id="personalInformation">
+            <div className='row px-2' id="personalInformation">
               <div className="col">
                 <p id='subtitle'> Personal Info</p>
-                <p><i class="fa fa-thumb-tack" aria-hidden="true"></i> Date of birth</p>
-                <p>Full Name</p>
-                <p>Gender</p>
-                <p>Age</p>
-
+                {details.map(det =>(
+                  <div>
+                    <p><span>Full Name</span> : {det.name}</p>
+                    <p><span>Age</span> : {det.age}</p>
+                    <p><span>Gender</span> : {det.gender}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
             <div id="hobbies">
-              <p id='subtitle'>Hobbies</p>
+              <p className='ms-2' id='subtitle'>Hobbies</p>
               <div className="row justify-content-center justify-content-sm-around my-2">
                 {hobbies.map( hob => (
-                  <div className="col-10 col-sm-5 col-md-3 col-xl-2 m-1" id='hob'>
+                  <div className="col-10 col-sm-5 col-md-3 col-xl-2 m-2" id='hob'>
                     <p><i className={hob.icon}></i> {hob.name}</p>
                   </div>
                 ))}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Navbar from './Layout/Navbar'
 
 const Resume = () => {
@@ -26,9 +26,31 @@ const Resume = () => {
   ])
 
   const [jobs, setJob] = useState([
-    {title:'Security Officer', company:'Special Macro Security'}
+    {title:'Security Officer', company:'Special Macro Security', id:'j1'}
   ])
 
+  const valueEl = useRef(null);
+
+  useEffect(() => {
+    skills.forEach(skill => {
+      let progress = document.getElementById(`progress-${skill.id}`);
+      
+      let startValue = 0;
+      let endValue = skill.percentage;
+      let speed = 50;
+
+      let timer = setInterval(() => {
+        startValue++;
+        valueEl.textContent = `${startValue}%`;
+        progress.style.background = `conic-gradient(var(--satin-sheen-gold) ${startValue * 3.6}deg, var(--satin-gold) ${startValue * 3.6}deg)`;
+  
+        if (startValue === endValue) {
+          clearInterval(timer);
+        }
+      }, speed);
+    });
+  }, [skills]); 
+  
 
   return (
     <div>
@@ -41,48 +63,56 @@ const Resume = () => {
             <p id='title' className='text-center'>RESUME</p>
             <div className="row justify-content-between">
               <div className="col-lg-5">
-                <p id="subtitle">Education <i class="fa-solid fa-graduation-cap"></i></p>
+                <p id="subtitle">Education <i className="fa-solid fa-graduation-cap"></i></p>
               
                 {school.map(sch => (
-                  <div className='mb-4 p-2 ' id='school'>
-                    <p>{sch.institution}</p>
+                  <div key={sch.id} className='mb-4 p-2 ' id='school'>
                     <p>{sch.course}</p>
+                    <p>{sch.institution}</p>
                     <span>{sch.duration}</span>
                   </div>
                 ))}
               
               </div>
               <div className="col-lg-5">
-                <p id="subtitle">Experience <i class="fa-solid fa-briefcase"></i></p>
+                <p id="subtitle">Experience <i className="fa-solid fa-briefcase"></i></p>
 
                 {jobs.map(job => (
-                  <div id="job">
+                  <div key={job.id} id="job">
                     <p>{job.title}</p>
                     <p>{job.company}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="row">
-              <div className="col">
-                <p id="subtitle">Skills <i class="fa-solid fa-user-gear"></i></p>
-                <div className="d-flex" id='Yscroll'>
-                  {skills.map(sk => (
-                    <div className='mx-2'>
-                      <span>{sk.name}</span>
+
+
+            <div className="row my-2">
+              
+                <p id="subtitle">Skills <i className="fa-solid fa-user-gear"></i></p>
+                <div className="row d-flex">
+                {skills.map(sk => (
+                  <div key={sk.id} className='col m-3' id='skill'>
+                    <span>{sk.name}</span>
+                    <div id={`progress-${sk.id}`} className='progress'>
+                      <div ref={valueEl} id='value'> {sk.percentage}%</div>
                     </div>
-                  ))}
+                  </div>
+                ))}
                 </div>
-              </div>
+             
             </div>
+
+
+
             <div className="row">
               <div className="col">
-                <p id="subtitle">Certificates <i class="fa-solid fa-certificate"></i></p>
+                <p id="subtitle">Certificates <i className="fa-solid fa-certificate"></i></p>
                 <div className="d-flex" id='Yscroll'>
                   {certificates.map(cert => (
-                    <div className='ms-4 mb-4 p-2 ' id='certificate'>
+                    <div key={cert.id} className='ms-4 mb-4 p-2 ' id='certificate'>
                       <div>
-                        <img src={cert.image} className='img-fluid' />
+                        <img src={cert.image} className='img-fluid' alt='Certificate display' />
                       </div>
                       <p>{cert.title}</p>
                       <p>{cert.from}</p>
