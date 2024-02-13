@@ -12,17 +12,17 @@ const About = () => {
     ])
 
     const [details, setDetails] = useState([
-      {name:'Manase Gunga Karisa', age:new Date().getFullYear() - 2002, gender:'Male' }
+      {name:'Manase Gunga Karisa', age:new Date().getFullYear() - 2003, gender:'Male' }
     ])
 
   return (
     <div>
       <div id="background"></div>
       <Navbar />
-      <div className="container mt-4" id='sd'>
+      <div className="container" id='cnt'>
         <div className="row" >
-          <div className="col bg-light mt-4 pt-4">
-            <p id='title' className='text-center'>ABOUT ME</p>
+          <div className="col pt-3" id='contentColumn'>
+            <p id='title' className='h5 text-center'>ABOUT ME</p>
 
             <div className="row px-2 px-md-0 justify-content-around align-items-center">
               <div className="col-6 d-md-none mb-2">
@@ -41,7 +41,7 @@ const About = () => {
 
             <div className='row px-2' id="personalInformation">
               <div className="col">
-                <p id='subtitle'> Personal Info</p>
+                <p id='subtitle'> Personal Info <i class="fa-solid fa-circle-info"></i></p>
                 {details.map(det =>(
                   <div>
                     <p><span>Full Name</span> : {det.name}</p>
@@ -53,10 +53,10 @@ const About = () => {
             </div>
 
             <div id="hobbies">
-              <p className='ms-2' id='subtitle'>Hobbies</p>
+              <p className='ms-2' id='subtitle'>Hobbies <i class="fa-solid fa-puzzle-piece"></i></p>
               <div className="row justify-content-center justify-content-sm-around my-2">
                 {hobbies.map( hob => (
-                  <div className="col-10 col-sm-5 col-md-3 col-xl-2 m-2" id='hob'>
+                  <div className="col-10 col-sm-5 col-md-3 col-xl-2 m-2 pt-3" id='hob'>
                     <p><i className={hob.icon}></i> {hob.name}</p>
                   </div>
                 ))}

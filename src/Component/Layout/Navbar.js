@@ -7,7 +7,8 @@ const Navbar = () => {
      <nav className="navbar pb-0 sticky-top navbar-expand-lg" id='navbar'>
         <div className="container">
             <Link className="navbar-brand" to="/"> 
-                <img src="/logo.png" width={100} className='img-fluid' alt="" />
+                Gunga
+                {/* <img src="/logo.png" width={100} className='img-fluid' alt="" /> */}
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span>
@@ -37,7 +38,6 @@ const Navbar = () => {
                 </ul>
             </div>
         </div>
-        <div className='row my-1 bar'></div>
     </nav>
    </div>
   )

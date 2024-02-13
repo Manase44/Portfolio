@@ -37,7 +37,7 @@
     height: 80%;
     width: 100%;
     border-top-left-radius: 60%;
-    background: url(../public/barkTexture.png);
+    background: url(../public/b7.png) center fixed;
     background-size: cover;
 }
 #contentDiv{
@@ -72,18 +72,49 @@
 a, .nav-item > a{
     text-decoration: none;
 }
-.nav-item > a{
+.nav-item > .nav-link{
     color: var(--white);
     font-weight: 600;
     font-family: var(--heading-font);
     font-size: 18px;
+    position: relative;
 }
-.nav-item > a:hover{
-    color: var(--white);
+.nav-item > .nav-link::before{
+    content: '';
+    position: absolute;
+    left: 3px;
+    bottom: 7px;
+    height: 2px;
+    background-color: var(--satin-sheen-gold);
+    width: 0%;
+    transition: all .5s;
+}
+.nav-item > .nav-link:hover::before{
+    width: 90%;
 }
 #links > a{
     color: var(--satin-sheen-gold);
     font-size: 40px;
+}
+#socialinks > #links > a{
+    color: var(--penn-blue);
+    opacity: 0.9;
+}
+#message{
+    height: 120px;
+}
+#sendbtn{
+    background-color: var(--penn-blue);
+    opacity: 0.9;
+    color: var(--white);
+}
+#pop{
+    color: var(--satin-sheen-gold);
+    padding: 5px 10px;
+    background-color: var(--satin-gold);
+    border-radius: 10px;
+    width: max-content;
+    margin-left: 30px;
 }
 button:focus{
     outline: none !important;
@@ -100,22 +131,41 @@ button:focus{
     display: none;
 }
 
+#cnt{
+    margin-top:60px;
+}
 #background{
     position: fixed;
-    background: url(../public/barkTexture.png);
+    background: url(../public/b7.png) no-repeat center fixed;
     background-size: cover;
     height: 100vh;
     bottom: 0;
     width: 100vw;
 }
-
+#contentColumn{
+    background-color: white;
+    opacity: 0.8;
+    overflow: hidden;
+}
 #navbar{
     position: fixed;
     width: 100vw;
-    height: 10%;
     background-color: var(--penn-blue);
+    opacity: 0.9;
 }
-
+#navbar > .container{
+    height:60px;
+}
+.navbar-brand, .navbar-brand:hover{
+    font-size: 35px;
+    font-weight: 800;
+    font-family: var(--heading-font);
+    color: var(--satin-sheen-gold);
+}
+#menu{
+    background-color: var(--penn-blue);
+    opacity: 0.9;
+}
 .bar{
     background-color: var(--satin-sheen-gold);
     width: 100vw;
@@ -124,8 +174,8 @@ button:focus{
     position: absolute;
 }
 #title{
-    font-weight: 600;
-    /* color: var(--white); */
+    font-weight: 800;
+    font-family: var(--heading-font);
 }
 #title::before, #title::after{
     content: "";
@@ -136,44 +186,55 @@ button:focus{
     margin: 4px 10px;
 }
 #subtitle{
+    font-size: 18px;
     font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color:var(--satin-sheen-gold);
-    text-decoration-thickness: 1.5px ;
-    /* color: var(--white); */
+    letter-spacing: 1.2px;
 }
 .aboutSummary{
     text-align: justify ;
-    /* color: var(--white); */
 }
-#school:hover{
+#school:hover, #job:hover{
     border-left: 2px var(--satin-sheen-gold) solid;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
-#menu{
-    background-color: var(--penn-blue);
-}
-#Yscroll{
-    overflow: auto;
-}
-#certificate > div {
-    border: 1px red solid;
-    width: 120px;
+#certificate{
+    width: 200px;
 }
 #hob{
     height: 3rem;
-    background-color: aqua;
+    background-color: var(--penn-blue);
+    opacity: 0.9;
+    color: var(--white);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .5s;
 }
 #hob:hover{
     transform: scale(105%);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
-#message{
-    height: 120px;
+#skillFilter{
+    list-style: none;
+    text-align: center;
+}
+#skillFilter > li{
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 16px 10px 16px;
+    margin-right: 10px;
+    font-weight: 500;
+    line-height: 1;
+    background-color: var(--satin-gold);
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+}
+#skillFilter > li:hover, #skillFilter > .active{
+    background-color: var(--penn-blue);
+    opacity: 0.9;
+    color: var(--white);
 }
 #skill {
     width:200px;
@@ -210,8 +271,28 @@ button:focus{
 }
 
 
-
-
+@media(max-width:1077px){
+    #toggler{
+        display: block;
+    }
+    #navMenu{
+        position: absolute;
+        top:3rem;
+        right: 0.6rem;
+        background-color: var(--satin-sheen-gold);
+        width: 160px;
+        display: none;
+    }
+    #navMenu > .nav-item > .nav-link{
+        font-weight: 300;
+    }
+    #navMenu.active {
+        display: block; 
+    }
+    .nav-item > a{
+        font-weight: 300;
+    }
+}
 @media(max-width:768px){
     #textDiv{
         position: absolute;
@@ -226,26 +307,16 @@ button:focus{
     #title::before, #title::after{
         width: 70px;
     }
-}
-@media(max-width:1077px){
-    #toggler{
-        display: block;
-    }
-    #BnavMenu{
-        width: 300px;
-        right: 0;
-        position:relative;
+    #skillFilter > li{
+        font-size: 11px;
+        width: 67.5px;
     }
     #navMenu{
-        position: absolute;
-        top: 3rem;
-        right: 1rem;
-        background-color: var(--satin-sheen-gold);
-        display:grid;
-        display: none;
+        margin-top:-225px;
     }
-    
-    .nav-item > a{
-        font-weight: 300;
+}
+@media(max-width:567px){
+    #navMenu{
+        margin-top:-250px;
     }
 }
