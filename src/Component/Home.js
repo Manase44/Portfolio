@@ -23,10 +23,7 @@ const Home = () => {
                             <h1>Manase Gunga</h1>
                             <h2>I am a Software Developer</h2>
                         </div>
-                        <ul className={`nav ${isNavMenuOpen ? 'active' : ''}`} id="navMenu">
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/" aria-current="page">Home</Link>
-                            </li>
+                        <ul className='nav' id='homeMenu'>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about">About</Link>
                             </li>
@@ -44,6 +41,23 @@ const Home = () => {
                             </li>
                         </ul>
                         <i className="fa-solid fa-bars fa-xl" id="toggler" onClick={toggleNavMenu}></i>
+                        <ul className={`nav ${isNavMenuOpen ? 'open' : ''}`} id="navMenu">
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/about">About</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contact">Contact</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/resume">Resume</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/projects">Projets</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/testimonials">Testmonials</Link>
+                            </li>
+                        </ul>
                         <div id="links" className="ms-3 mt-3">
                             <a href="https://github.com/Manase44"  title='Github' className='me-2' rel="noreferrer"
                              target="_blank">

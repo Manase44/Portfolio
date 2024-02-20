@@ -66,6 +66,7 @@ const Contact = () => {
                     <span className='input-group-text'>Subject</span>
                     <select class="form-select" aria-label="Subject" name='subject' required>
                       <option value="Hire Me">Hire Me</option>
+                      <option value="Other">Collaboration</option>
                       <option value="Make Inquiries">Make Inquiries</option>
                       <option value="Other">Other</option>
                     </select>
@@ -74,7 +75,9 @@ const Contact = () => {
                     <textarea class="form-control" placeholder="Write your message" name='message' id="message" required></textarea>
                     <label for="message">Write Your Message</label>
                   </div>
-                  <button type="submit" class="text-center btn" id='sendbtn' disabled={isSubmitting}>Send</button>
+                  <div className="text-center">
+                    <button type="submit" class="btn" id='sendbtn' disabled={isSubmitting}>Send</button>
+                  </div>
                 </form>
               </div>
 

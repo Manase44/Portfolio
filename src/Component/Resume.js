@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import Navbar from './Layout/Navbar'
+import RESUME from './Myresume.pdf'
 
 const Resume = () => {
   const [school, setSchool] = useState([
@@ -60,6 +61,7 @@ const Resume = () => {
     skillsAfterFilter = skills.filter(skill => skill.tech === filter);
   }
 
+
   return (
     <div>
       <div id="background">
@@ -75,9 +77,9 @@ const Resume = () => {
               
                 {school.map(sch => (
                   <div key={sch.id} className='mb-2 p-2 ' id='school'>
-                    <p>{sch.course}</p>
-                    <p>{sch.institution}</p>
-                    <span>{sch.duration}</span>
+                    <p id='schcourse'>{sch.course}</p>
+                    <p id='schname'>{sch.institution}</p>
+                    <span className='text-muted'>{sch.duration}</span>
                   </div>
                 ))}
               
@@ -131,7 +133,7 @@ const Resume = () => {
                   {certificates.map(cert => (
                     <div className="col-lg-3">
                       <div className="card mx-2 mb-4"  key={cert.id} id='certificate'>
-                        <img src={cert.image} className='card-img-top' alt='Certificate display'/>
+                        <img src={cert.image} className='card-img-top' height={200} alt='Certificate display'/>
                         <div>
                         <div className='card-body'>
                           <p className='card-title'>{cert.title}</p>
@@ -142,6 +144,10 @@ const Resume = () => {
                     </div>
                   ))}
                 </div>
+            </div>
+            
+            <div className="row mb-4 d-flex justify-content-center" id="download">
+              <a href={RESUME} target='_blank' className='btn'>Checkout my CV</a>
             </div>
 
           </div>

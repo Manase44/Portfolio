@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merienda:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Roboto:wght@500&display=swap');
 
 
+/* GENERAL */
+.btn:focus {
+    outline: none !important;
+}
 :root{
     --penn-blue: #001F60ff;
     --eerie-black: #1A1A1Aff;
@@ -12,10 +16,21 @@
     --merianda-font: 'Merienda', cursive;
     --number:'Roboto', sans-serif;
 }
-
-#MyPhoto{
-  transform: rotateY(180deg);
+a, .nav-item > a{
+    text-decoration: none;
 }
+.nav-item > .nav-link{
+    color: var(--white);
+    font-weight: 600;
+    font-family: var(--heading-font);
+    font-size: 18px;
+    position: relative;
+}
+.fa-bars{
+    color: var(--white);
+}
+
+/* HOME PAGE */
 .col{
     position: relative;
 }
@@ -40,6 +55,9 @@
     background: url(../public/b7.png) center fixed;
     background-size: cover;
 }
+#MyPhoto{
+    transform: rotateY(180deg);
+  }
 #contentDiv{
     position: absolute;
     width: 100vw;
@@ -65,33 +83,20 @@
     font-weight: 500;
     font-size: 40px;
 }
-
-
-
-
-a, .nav-item > a{
-    text-decoration: none;
-}
-.nav-item > .nav-link{
-    color: var(--white);
-    font-weight: 600;
-    font-family: var(--heading-font);
-    font-size: 18px;
-    position: relative;
-}
-.nav-item > .nav-link::before{
+#homeMenu > .nav-item > .nav-link::before{
     content: '';
     position: absolute;
-    left: 3px;
+    left: 1em;
     bottom: 7px;
     height: 2px;
     background-color: var(--satin-sheen-gold);
     width: 0%;
     transition: all .5s;
 }
-.nav-item > .nav-link:hover::before{
-    width: 90%;
+#homeMenu > .nav-item > .nav-link:hover::before{
+    width: 50%;
 }
+/* Social links */
 #links > a{
     color: var(--satin-sheen-gold);
     font-size: 40px;
@@ -100,29 +105,6 @@ a, .nav-item > a{
     color: var(--penn-blue);
     opacity: 0.9;
 }
-#message{
-    height: 120px;
-}
-#sendbtn{
-    background-color: var(--penn-blue);
-    opacity: 0.9;
-    color: var(--white);
-}
-#pop{
-    color: var(--satin-sheen-gold);
-    padding: 5px 10px;
-    background-color: var(--satin-gold);
-    border-radius: 10px;
-    width: max-content;
-    margin-left: 30px;
-}
-button:focus{
-    outline: none !important;
-    box-shadow: none;
-}
-.fa-bars{
-    color: var(--white);
-}
 #toggler{
     color: var(--white);
     position: fixed;
@@ -130,7 +112,19 @@ button:focus{
     right: 2rem;
     display: none;
 }
+#navMenu{
+    position: fixed;
+    top:3rem;
+    right: 2rem;
+    background-color: var(--satin-sheen-gold);
+    width: 150px;
+    display: none;
+}
+#navMenu > .nav-item > .nav-link{
+    font-weight: 300;
+}
 
+/* PAGES */
 #cnt{
     margin-top:60px;
 }
@@ -166,12 +160,8 @@ button:focus{
     background-color: var(--penn-blue);
     opacity: 0.9;
 }
-.bar{
-    background-color: var(--satin-sheen-gold);
-    width: 100vw;
-    height: 5px;
-    bottom: 0;
-    position: absolute;
+#menu > ul > li > a.active{
+    color: var(--satin-sheen-gold);
 }
 #title{
     font-weight: 800;
@@ -190,12 +180,50 @@ button:focus{
     font-weight: 600;
     letter-spacing: 1.2px;
 }
+
+/* CONTACT PAGE */
+#message{
+    height: 120px;
+}
+#sendbtn{
+    background-color: var(--penn-blue);
+    opacity: 0.9;
+    color: var(--white);
+}
+#pop{
+    color: var(--satin-sheen-gold);
+    padding: 5px 10px;
+    background-color: var(--satin-gold);
+    border-radius: 10px;
+    width: max-content;
+    margin-left: 30px;
+}
+
+/* ABOUT PAGE */
 .aboutSummary{
     text-align: justify ;
 }
+#serviceDiv{
+    border-radius: 15px;
+    background-color: var(--eerie-black);
+    padding: 10px;
+}
+#serviceDiv > p{
+    color: var(--white);
+}
+
+
+/* RESUME PAGE */
 #school:hover, #job:hover{
     border-left: 2px var(--satin-sheen-gold) solid;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+#schcourse{
+    font-weight: 700;
+    font-family: var(--heading-font);
+}
+#schname{
+    font-weight: 100;
 }
 #certificate{
     width: 200px;
@@ -269,34 +297,60 @@ button:focus{
     font-size: 25px;
     font-family: var(--number);
 }
+#download > a{
+    font-weight: 600;
+    font-family: var(--heading-font);
+    width: 30%;
+    background-color: var(--penn-blue);
+    opacity: 0.9;
+    color: var(--white);
+    font-size: 20px;
+}
+#download > a:hover{
+    background-color: var(--satin-sheen-gold);
+}
 
+/* PROJECT PAGE */
+#projectDiv{
+    border: 1px solid var(--satin-sheen-gold);
+    border-radius: 15px;
+    padding: 15px;
+}
+#imgDiv{
+    overflow: hidden;
+    border-radius: 15px; 
+}
+#projectButtons > a{
+    background-color:var(--penn-blue);
+    opacity: 0.9;
+    border-radius: 15px;
+    width: 120px;
+    color: var(--white);
+    border: none;
+    outline: none;
+}
+#projectButtons > a:hover{
+    background-color: var(--satin-sheen-gold);
+}
 
+/* MEDIA QUERIES */
 @media(max-width:1077px){
     #toggler{
         display: block;
     }
-    #navMenu{
-        position: absolute;
-        top:3rem;
-        right: 0.6rem;
-        background-color: var(--satin-sheen-gold);
-        width: 160px;
+    #homeMenu{
         display: none;
     }
-    #navMenu > .nav-item > .nav-link{
-        font-weight: 300;
+    #navMenu{
+        display: none;
     }
-    #navMenu.active {
-        display: block; 
-    }
-    .nav-item > a{
-        font-weight: 300;
+    #navMenu.open {
+        display: grid; 
     }
 }
 @media(max-width:768px){
     #textDiv{
         position: absolute;
-        z-index: 10;
     }
     #name > h1{
         font-size: 40px;
@@ -311,12 +365,7 @@ button:focus{
         font-size: 11px;
         width: 67.5px;
     }
-    #navMenu{
-        margin-top:-225px;
-    }
-}
-@media(max-width:567px){
-    #navMenu{
-        margin-top:-250px;
+    #download > a{
+        width: 60%;
     }
 }

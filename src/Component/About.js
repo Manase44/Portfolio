@@ -25,12 +25,13 @@ const About = () => {
             <p id='title' className='h5 text-center'>ABOUT ME</p>
 
             <div className="row px-2 px-md-0 justify-content-around align-items-center">
+              <p className='ms-2' id="subtitle">Summary <i class="fa-solid fa-clipboard-list"></i></p>
               <div className="col-6 d-md-none mb-2">
                 <img src="/Me2-removebg-preview.png" className='img-fluid' alt="" />
               </div>
               <div className="col-md-7">
                 <p className="aboutSummary">
-                  I am a Software engineering student. Skilled in JavaScript frameworks like Node.js, Express.js, and React; adept at building performant web apps using MongoDB. Constantly expanding expertise across front and back-end languages to engineer intuitive solutions. I also have a vast
+                  I am a Software engineering student. Skilled in JavaScript frameworks like Node.js, Express.js, and React; adept at building performant web apps using MongoDB. Constantly expanding expertise across front and back-end languages to engineer intuitive solutions. Have a vast
                   experience working with Microsoft Office packages. Passionate about developing applications that streamline systems and connect communities. Eager to leverage my abilities to turn tomorrow's innovations into everyday solutions.
                 </p>
               </div>
@@ -51,6 +52,25 @@ const About = () => {
                 ))}
               </div>
             </div>
+            
+            <div className="row px-2" id='Services'>
+              <p id="subtitle">What I do <i class="fa-brands fa-buffer"></i></p>
+              <div className="col-3 m-2" id='serviceDiv'>
+                  <div className='text-center'>
+                    <img src="/MERN 1.png" width={120} alt="mern" />
+                  </div>
+                  <p id='serviceTitle' className='text-center'>MERN Stack Development</p>
+                  <p id='serviceDescription' className='text-center'>Able to deliver powerful web applications using MongoDB, Express.js, React, and Node.js. From database to front-end, I create tailored solutions for your business needs.</p>
+              </div>
+              <div className="col-3 m-2" id='serviceDiv'>
+                  <div className='text-center'>
+                    <img src="/MERN 1.png" width={120} alt="mern" />
+                  </div>
+                  <p id='serviceTitle' className='text-center'>Web Design</p>
+                  <p id='serviceDescription' className='text-center'>Able to deliver powerful web applications using MongoDB, Express.js, React, and Node.js. From database to front-end, I create tailored solutions for your business needs.</p>
+              </div>
+            </div>   
+
 
             <div id="hobbies">
               <p className='ms-2' id='subtitle'>Hobbies <i class="fa-solid fa-puzzle-piece"></i></p>
