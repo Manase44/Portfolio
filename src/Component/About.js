@@ -74,7 +74,7 @@ const About = () => {
                     <img src="/full-stack-developer.jpeg" width={120} alt="mern" />
                   </div>
                   <p id='serviceTitle' className='text-center  mt-2'>Full-Stack Development</p>
-                  <p id='serviceDescription' className='text-center'>Ability to craft visually stunning and user-friendly websites tailored to your brand, combining creativity with functionality to deliver captivating online experiences that engage your audience and drive results.</p>
+                  <p id='serviceDescription' className='text-center'>Offer end-to-end expertise in building versatile web applications, handling both front-end and back-end aspects seamlessly. From crafting intuitive user interfaces to managing robust server-side functionalities, delivering comprehensive solutions tailored to your project requirements.</p>
               </div>
             </div>   
 
