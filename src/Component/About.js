@@ -53,21 +53,28 @@ const About = () => {
               </div>
             </div>
             
-            <div className="row px-2" id='Services'>
+            <div className="row justify-content-center px-2" id='Services'>
               <p id="subtitle">What I do <i class="fa-brands fa-buffer"></i></p>
-              <div className="col-3 m-2" id='serviceDiv'>
+              <div className=" col-sm-5 col-lg-3 m-2" id='serviceDiv'>
                   <div className='text-center'>
-                    <img src="/MERN 1.png" width={120} alt="mern" />
+                    <img src="/mern.png" width={120} alt="mern" />
                   </div>
-                  <p id='serviceTitle' className='text-center'>MERN Stack Development</p>
+                  <p id='serviceTitle' className='text-center mt-3'>MERN Stack Development</p>
                   <p id='serviceDescription' className='text-center'>Able to deliver powerful web applications using MongoDB, Express.js, React, and Node.js. From database to front-end, I create tailored solutions for your business needs.</p>
               </div>
-              <div className="col-3 m-2" id='serviceDiv'>
+              <div className="col-sm-5 col-lg-3 m-2" id='serviceDiv'>
                   <div className='text-center'>
-                    <img src="/MERN 1.png" width={120} alt="mern" />
+                    <img src="/web_design.png" width={120} alt="mern" />
                   </div>
-                  <p id='serviceTitle' className='text-center'>Web Design</p>
-                  <p id='serviceDescription' className='text-center'>Able to deliver powerful web applications using MongoDB, Express.js, React, and Node.js. From database to front-end, I create tailored solutions for your business needs.</p>
+                  <p id='serviceTitle' className='text-center  mt-2'>Web Design</p>
+                  <p id='serviceDescription' className='text-center'>Ability to craft visually stunning and user-friendly websites tailored to your brand, combining creativity with functionality to deliver captivating online experiences that engage your audience and drive results.</p>
+              </div>
+              <div className="col-sm-5 col-lg-3 m-2" id='serviceDiv'>
+                  <div className='text-center'>
+                    <img src="/full-stack-developer.jpeg" width={120} alt="mern" />
+                  </div>
+                  <p id='serviceTitle' className='text-center  mt-2'>Full-Stack Development</p>
+                  <p id='serviceDescription' className='text-center'>Ability to craft visually stunning and user-friendly websites tailored to your brand, combining creativity with functionality to deliver captivating online experiences that engage your audience and drive results.</p>
               </div>
             </div>   
 
