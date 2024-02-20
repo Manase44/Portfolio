@@ -4,12 +4,12 @@
 
 /* GENERAL */
 #background, #cnt, #name{
-    animation: animation ease 3s;
+    animation: animation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 #textDiv > #links, #homeMenu{
-    animation: expand ease 3s;
+    animation: expand ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
