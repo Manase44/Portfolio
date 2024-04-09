@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { useState } from 'react';
-import { Analytics } from "@vercel/analytics/react"
 
 
 const Home = () => {
@@ -12,7 +11,6 @@ const Home = () => {
     };
   return (
     <div className='container-fluid vh-100'>
-        <Analytics />
         <div className="row w-auto h-100">
             <div id="overall" className='col h-100 p-0'>
                 <div id="layer1"></div>
