@@ -146,7 +146,7 @@ const Resume = () => {
                 </div>
             </div>
             
-            <div className="row mb-4 d-flex justify-content-center" id="download">
+            <div className="row mt-2 mb-4 d-flex justify-content-center" id="download">
               <a href={RESUME} target='_blank' className='btn'>Checkout my CV</a>
             </div>
 
