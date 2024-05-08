@@ -11,9 +11,10 @@ const Resume = () => {
   ])
 
   const [certificates, setCertificate] = useState([
-    {id:'cert1', title:"Basics of Operating Systems", from:"Cisco Skills for All", image:"/certs/Operating_Systems_Basics.png"},
-    {id:'cert2', title:"Introduction to Data Science", from:"Cisco Skills for All", image:"/certs/Introduction_to_Data_Science.png"},
-    {id:'cert3', title:"Introduction to JavaScript", from:"Wild Learner", image:"/certs/certificate_1684759100718.jpg"}
+    {id:'cert1', title:"Designing User Interface and Experience", from:"IBM", image:"/certs/UI-UX.png"},
+    {id:'cert2', title:"Basics of Operating Systems", from:"Cisco Skills for All", image:"/certs/Operating_Systems_Basics.png"},
+    {id:'cert3', title:"Introduction to Data Science", from:"Cisco Skills for All", image:"/certs/Introduction_to_Data_Science.png"},
+    {id:'cert4', title:"Introduction to JavaScript", from:"Wild Learner", image:"/certs/certificate_1684759100718.jpg"}
   ])
 
   const [skills, setSkill] = useState([
