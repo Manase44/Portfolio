@@ -25,6 +25,9 @@ const Resume = () => {
     {name:'CSS', percentage:98, id:'sk5', tech:'frontend'},
     {name:'Microsoft Suite', percentage:99.5, id:'sk6', tech:'general'},
     {name:'MongoDB', percentage:30, id:'sk7', tech:'database'},
+    {name: 'TailwindCSS', percentage: 70, id:'sk8', tech: 'frontend'},
+    {name:'Bootstrap', percentage: 70, id: 'sk9', tech: 'frontend'},
+    {name:'Postgres', percentage:0, id:'sk10', tech: 'database'}
   ])
 
   const [jobs, setJob] = useState([
