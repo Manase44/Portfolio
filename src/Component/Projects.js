@@ -29,6 +29,19 @@ const Projects = () => {
               </div>
               <div class="col-lg-5" id='projectDiv'>
                   <div id="imgDiv">
+                    <img src="/project/rock_paper_scissors_game.png" width={550} height={300}/>
+                  </div>
+                  <div>
+                    <p class="h4 mt-2">ROCK, PAPER, SCISSORS GAME</p>
+                    <p>Play the Rock, Paper, Scissor game online</p>
+                    <div class="d-flex justify-content-around" id='projectButtons'>
+                      <a href="https://rock-paper-scissors-smoky-tau.vercel.app/" target='_balnk' class="btn">View </a>
+                      <a href="#" class="btn">Github</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-5" id='projectDiv'>
+                  <div id="imgDiv">
                     <img src="/project/Grade_Revealer.png" width={550} height={300}/>
                   </div>
                   <div>

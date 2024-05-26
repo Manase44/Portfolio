@@ -6,6 +6,7 @@ import Contact from "./Component/Contact";
 import Resume from "./Component/Resume";
 import Projects from "./Component/Projects";
 import Testimonials from "./Component/Testimonials";
+import NotFound from "./Component/NotFound";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route exact path="/testimonials">
             <Testimonials />
+          </Route>
+          <Route exact path="*">
+            <NotFound/>
           </Route>
         </Switch>
       </div>
