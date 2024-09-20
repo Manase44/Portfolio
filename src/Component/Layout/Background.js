@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Background = () => {
-  return (
-    <div className='container-fluid' id='background'>
-      
-    </div>
-  )
-}
+  return <div className="container-fluid" id="background"></div>;
+};
 
-export default Background
+export default Background;

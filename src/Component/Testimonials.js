@@ -8,7 +8,7 @@ const Testimonials = () => {
       <Navbar />
       <div className="container" id="cnt">
         <div className="row">
-          <div className="col pt-3" id='contentColumn'>
+          <div className="col pt-3" id="contentColumn">
             <p id="title" className="h5 text-center">
               TESTIMONIES
             </p>
